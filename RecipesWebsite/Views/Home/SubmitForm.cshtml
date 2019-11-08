@@ -1,0 +1,11 @@
+﻿@model RecipesWebsite.Models.Recipe
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Submit Form";
+}
+
+<h2>Added Recipe!</h2>
+<p>@Model.RecipeName has been successfully added as a(n) @Model.Category on @Model.Date by @Model.Author.</p>
+<p>
+    You may wish to go back to <a asp-action="RecipeList">the Recipe List Page</a> to see more recipes.
+</p>

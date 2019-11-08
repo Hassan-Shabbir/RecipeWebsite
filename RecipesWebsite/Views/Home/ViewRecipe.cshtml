@@ -1,0 +1,26 @@
+﻿@model RecipesWebsite.Models.Recipe
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "View Recipe";
+}
+
+<h1>View Recipe</h1>
+
+<img class="big" src="@Model.ImageUrl">
+<h1>@Model.RecipeName</h1>
+<h1>By: @Model.Author</h1>
+<div>5 reviews</div>
+<div>☆☆☆☆</div>
+<div>Date: @Model.Date</div>
+<div>@Model.Category</div>
+<form asp-action="ReviewRecipe" asp-route-id="@Model.ID">
+    <input type="submit" value="Review this recipe" />
+</form>
+<div>
+    <h2>Ingredients: </h2>
+    <p>@Model.Ingredients</p>
+</div>
+<div>
+    <h2>Directions: </h2>
+    <p>@Model.Directions</p>
+</div>

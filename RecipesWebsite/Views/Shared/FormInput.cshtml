@@ -1,0 +1,43 @@
+﻿@model RecipesWebsite.Models.Recipe
+
+<form asp-action="SubmitForm" method="post">
+    <label>
+        Recipe Name:
+        <input type="text" asp-for="RecipeName">
+    </label>
+    <label>
+        Author Name:
+        <input type="text" asp-for="Author">
+    </label>
+    <label>
+        Select a Recipe Image:
+        <input type="text" asp-for="ImageUrl">
+    </label>
+    <label>
+        Type of Recipe:
+        <select asp-for="Category">
+            <option value="bread">Bread</option>
+            <option value="dessert">Dessert</option>
+            <option value="side">Side</option>
+            <option value="drink">Drink</option>
+            <option value="mainCourse">Main Course</option>
+            <option value="pizza">Pizza</option>
+            <option value="salad">Salad</option>
+            <option value="snack">Snack</option>
+            <option value="soup">Soup</option>
+        </select>
+    </label>
+    <label>
+        Ingredients:
+        <textarea class="box" asp-for="Ingredients" rows="20">
+    </textarea>
+    </label>
+    <label>
+        Directions:
+        <textarea class="box" asp-for="Directions" rows="20">
+    </textarea>
+    </label>
+    <input type="submit" value="Save">
+</form>
+
+<a asp-action="Index" class="button"><button>Cancel</button></a>
